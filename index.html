@@ -1,269 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Print&Pixel.ask</title>
-    <!-- Tipografías -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;800&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
-    <style>
-        /* --- Reset básico --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Lato', sans-serif;
-        }
-
-        body {
-            background: linear-gradient(120deg, #FFF1E6, #F7C8DA);
-            color: #333;
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        /* --- Header --- */
-        header {
-            background: rgba(255,255,255,0.8);
-            backdrop-filter: blur(10px);
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        header h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.8rem;
-            color: #E1306C;
-            cursor: pointer;
-        }
-
-        nav a {
-            margin-left: 25px;
-            font-weight: 600;
-            color: #333;
-            transition: color 0.3s, transform 0.2s;
-        }
-
-        nav a:hover {
-            color: #E1306C;
-            transform: scale(1.1);
-        }
-
-        /* --- Secciones --- */
-        section {
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        section h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            color: #C6B4F6;
-        }
-
-        section p {
-            max-width: 700px;
-            margin: 0 auto 40px auto;
-            font-size: 1.1rem;
-            color: #555;
-        }
-
-        /* --- Cards para secciones --- */
-        .card {
-            background: rgba(255,255,255,0.85);
-            border-radius: 20px;
-            padding: 30px;
-            margin: 20px auto;
-            max-width: 350px;
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
-        }
-
-        /* --- Botón Instagram --- */
-        .instagram-btn {
-            display: inline-flex;
-            align-items: center;
-            background: linear-gradient(45deg, #F7C8DA, #E1306C);
-            color: white;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-weight: bold;
-            font-family: 'Poppins', sans-serif;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .instagram-btn img {
-            width: 25px;
-            height: 25px;
-            margin-right: 10px;
-        }
-
-        .instagram-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-        }
-
-        /* --- Formulario --- */
-        form input, form textarea {
-            padding: 12px;
-            margin-bottom: 15px;
-            border-radius: 12px;
-            border: 1px solid #ccc;
-            width: 100%;
-            font-size: 1rem;
-        }
-
-        form button {
-            padding: 12px;
-            background: linear-gradient(45deg, #F7C8DA, #E1306C);
-            color: white;
-            border: none;
-            border-radius: 25px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        form button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-        }
-
-        /* --- Footer --- */
-        footer {
-            background: rgba(255,255,255,0.8);
-            backdrop-filter: blur(10px);
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-            color: #555;
-            margin-top: 40px;
-        }
-
-        /* --- Animaciones simples --- */
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 1.2s forwards;
-        }
-
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Print&Pixels | Inicio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" />
 </head>
-<body>
+<body class="bg-white text-gray-700 font-sans">
 
-    <!-- Header -->
-    <header>
-        <h1>Print&Pixel.ask</h1>
-        <nav>
-            <a href="#about">Sobre Nosotros</a>
-            <a href="#portfolio">Portafolio</a>
-            <a href="#contact">Contacto</a>
-        </nav>
-    </header>
+  <!-- 🌸 NAVBAR -->
+  <header class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold text-pink-400">Print&Pixels</h1>
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="hover:text-pink-400 transition">Inicio</a></li>
+        <li><a href="servicios.html" class="hover:text-pink-400 transition">Servicios</a></li>
+        <li><a href="sobremi.html" class="hover:text-pink-400 transition">Sobre mí</a></li>
+        <li><a href="contacto.html" class="hover:text-pink-400 transition">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Sección Sobre Nosotros -->
-    <section id="about">
-        <h2 class="fade-in">¡Bienvenid@s a Print&Pixel.ask!</h2>
-        <p class="fade-in">
-            Creamos invitaciones digitales e impresas totalmente personalizadas, interactivas y con un estilo único. 
-            Dale un toque divertido y elegante a tus eventos con nuestro diseño minimalista y moderno.
-        </p>
-        <a href="https://www.instagram.com/printpixels.ask" target="_blank" class="instagram-btn fade-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-            Síguenos en Instagram
-        </a>
-    </section>
+  <!-- 🌸 HERO SECTION -->
+  <section class="h-screen flex flex-col justify-center items-center bg-pink-50 text-center px-4">
+    <h2 class="text-5xl font-bold text-pink-400 mb-4">Diseño y papelería con propósito ✨</h2>
+    <p class="text-gray-600 text-lg max-w-xl mb-8">
+      En Print&Pixels creamos invitaciones, impresiones y detalles personalizados con amor y estilo.  
+      Dale vida a tus ideas con un toque elegante y femenino 🌸
+    </p>
+    <a href="contacto.html" class="bg-pink-400 text-white px-8 py-3 rounded-2xl shadow-md hover:bg-pink-500 transition">
+      Contáctanos 💌
+    </a>
+  </section>
 
-    <!-- Sección Portafolio -->
-    <section id="portfolio">
-        <h2 class="fade-in">Portafolio</h2>
-        <div class="card
-    <!-- Sección Portafolio -->
-    <section id="portfolio">
-        <h2 class="fade-in">Portafolio</h2>
-        <div class="card fade-in">
-            <h3>Invitación Baby Shower</h3>
-            <p>Diseño minimalista y elegante, totalmente personalizado para tu evento.</p>
-        </div>
-        <div class="card fade-in">
-            <h3>Invitación Cumpleaños</h3>
-            <p>Colores divertidos y llamativos, con opción interactiva digital.</p>
-        </div>
-        <div class="card fade-in">
-            <h3>Invitación Boda</h3>
-            <p>Diseño sofisticado, elegante y romántico, impresa o digital.</p>
-        </div>
-    </section>
-
-    <!-- Sección Contacto -->
-    <section id="contact">
-        <h2 class="fade-in">Contacto</h2>
-        <p class="fade-in">
-            ¿Quieres una invitación personalizada? ¡Escríbenos y haremos realidad tu idea!
-        </p>
-        <form class="fade-in" style="max-width:400px; margin:20px auto; display:flex; flex-direction:column;">
-            <input type="text" placeholder="Nombre">
-            <input type="email" placeholder="Correo">
-            <textarea placeholder="Mensaje" rows="4"></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        &copy; 2025 Print&Pixel.ask. Todos los derechos reservados.
-    </footer>
-
-    <script>
-        // Animación de fade-in al hacer scroll
-        const faders = document.querySelectorAll('.fade-in');
-        const appearOptions = {
-            threshold: 0.2
-        };
-
-        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-            entries.forEach(entry => {
-                if(!entry.isIntersecting) return;
-                entry.target.classList.add('visible');
-                appearOnScroll.unobserve(entry.target);
-            });
-        }, appearOptions);
-
-        faders.forEach(fader => {
-            appearOnScroll.observe(fader);
-        });
-    </script>
-
-    <style>
-        /* Para que la animación fade-in funcione al aparecer en scroll */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+  <!-- 🌸 FOOTER -->
+  <footer class="bg-pink-100 text-center py-6">
+    <p class="text-sm mb-2">Síguenos en Instagram 💕</p>
+    <a href="https://www.instagram.com/printpixels.ask" target="_blank" class="text-pink-500 font-medium hover:underline">
+      @printpixels.ask
+    </a>
+    <p class="text-xs text-gray-500 mt-4">© 2025 Print&Pixels. Todos los derechos reservados.</p>
+  </footer>
 
 </body>
 </html>
